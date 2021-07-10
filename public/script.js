@@ -1,0 +1,37 @@
+console.log("loaded");
+
+document.querySelector('#btnLoad').addEventListener('click', () => {
+	if (document.querySelector('#dinoName') !== null) {
+		document.querySelector('#dinoName').remove();
+	}
+	if (document.querySelector('#dinoImage') !== null) {
+		document.querySelector('#dinoImage').remove();
+	}
+	getDinoName();
+});
+
+async function getDinoName() {
+	const response = await fetch("/dinoname");
+	const data = await response.json();
+	let dinoName = data[0].join(' ');
+	console.log(dinoName);
+
+	
+
+	getDinoImage();
+}
+
+async function getDinoImage() {
+	const response = await fetch("/dinoimage");
+	const data = await response.json();
+	let dinoImage = data.value[Math.floor(Math.random() * data.value.length)];
+	let dinoImageUrl = dinoImage.thumbnailUrl;
+	let dinoAlt = dinoImage.name;
+	console.log(dinoImage);
+
+	let img = document.createElement('img');
+	img.id = 'dinoImage';
+	img.src = dinoImageUrl;
+	img.alt = dinoAlt;
+	document.querySelector('#dinoWrapper').appendChild(img);
+}

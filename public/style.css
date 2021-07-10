@@ -1,0 +1,77 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background: center / cover url('memebg3.jpg');
+	color: hsl(0, 0%, 6%);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	margin-top: 0;
+	font-family: 'PT Mono', monospace;
+	font-size: 2rem;
+	line-height: 1;
+    color: rgb(0, 0, 0);
+	margin-left: 10px;
+	background-color: white;
+	
+}
+
+.generator {
+	padding: 2rem;
+	text-align: center;
+}
+
+button {
+	background: rgb(255, 255, 255);
+	border: none;
+	color: hsl(0, 0%, 0%);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	transition: background-color 150ms ease-in-out;
+	cursor: pointer;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+}
+
+button:hover {
+	background: rgb(0, 0, 0);
+	color: white;
+}
+
+#dinoWrapper {
+	width: 80%;
+	max-width: 25rem;
+	display: block;
+	margin: auto;
+}
+
+@media (min-width: 37.5em) {
+	h1 {
+		font-size: 3rem;
+	}
+	#dinoWrapper {
+		width: 50%;
+	}
+}
+
+
+
+#dinoImage {
+	max-width: 100%;
+	box-shadow: 18px 21px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 18px 21px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 18px 21px 5px 0px rgba(0,0,0,0.75);
+}
