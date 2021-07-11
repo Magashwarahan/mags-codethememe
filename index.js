@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
-const port = 3000;
 const fetch = require('node-fetch');
 
 app.use(express.static('public'));
 
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-  });
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, _=>{
+	console.log('Example app listening at ${PORT}')
+});
+
   
 app.get('/dinoname', async (request, response) => {
 	const fetchApi = await fetch(
