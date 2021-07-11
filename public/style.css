@@ -35,7 +35,7 @@ h1 {
 }
 
 button {
-	background: rgb(255, 255, 255);
+	background:#eb4034;
 	border: none;
 	color: hsl(0, 0%, 0%);
 	padding: 1rem 2rem;
@@ -47,8 +47,8 @@ button {
 }
 
 button:hover {
-	background: rgb(0, 0, 0);
-	color: white;
+	background: #660700;
+	color: black;
 }
 
 #dinoWrapper {
